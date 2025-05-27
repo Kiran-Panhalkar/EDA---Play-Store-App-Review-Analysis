@@ -1,0 +1,19 @@
+import re
+
+def find_ssn(text):
+    # Define the pattern for a valid SSN
+    ssn_pattern = r'\b\d{3}-\d{2}-\d{4}\b'
+    
+    # Find all SSNs in the input text
+    ssns = re.findall(ssn_pattern, text)
+    
+    return ssns
+
+# Example usage
+input_text = "John's SSN is 123-45-6789 and Jane's SSN is 987-65-4321."
+ssns = find_ssn(input_text)
+
+if ssns:
+    print("SSNs found:", ssns)
+else:
+    print("No SSNs found.")
