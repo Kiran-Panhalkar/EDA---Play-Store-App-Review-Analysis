@@ -8,6 +8,20 @@ def find_ssn(text):
     ssns = re.findall(ssn_pattern, text)
     
     return ssns
+    
+
+def extract_emails(text):
+    # Define the regular expression pattern for emails
+    email_pattern = r'[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+'
+    
+    # Find all matches in the input text
+    emails = re.findall(email_pattern, text)
+    all_emails = text2
+    
+    return emails
+
+
+
 
 # Example usage
 input_text = "John's SSN is 123-45-6789 and Jane's SSN is 987-65-4321."
@@ -17,3 +31,5 @@ if ssns:
     print("SSNs found:", ssns)
 else:
     print("No SSNs found.")
+
+
